@@ -100,7 +100,7 @@ git add README.md
 git commit -m "first commit"
 git branch -M main (master)
 git remote add origin remote repo
-git push -u origin main
+git push -u origin main or
 git push -u origin master
 
 …or push an existing repository from the command line
@@ -136,3 +136,9 @@ git checkout feature/your-feature-name
 ## Step 2: Pull latest changes from main into your feature branch
 
 git pull origin main(master)
+git push origin feature/your-feature-name
+
+Create a new branch (`git checkout -b feature/feature-name`)
+Commit your changes (`git commit -m 'Add new feature'`)
+Push to the branch (`git push origin feature-name`)
+Create a pull request
