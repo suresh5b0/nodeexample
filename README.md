@@ -143,6 +143,8 @@ git pull origin main(master)
 git push origin feature/your-feature-name
 
 Create a new branch (`git checkout -b feature/feature-name`)
+
 Commit your changes (`git commit -m 'Add new feature'`)
+
 Push to the branch (`git push origin feature-name`)
 Create a pull request
