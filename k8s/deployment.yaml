@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: nodexample
+  name: nodexample
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nodexample
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: nodexample
+    spec:
+      containers:
+      - image: ssuresh5b0/first-repo:v1
+        name: first-repo
+        ports:
+          - containerPort: 3000
+        resources: 
+status: {}

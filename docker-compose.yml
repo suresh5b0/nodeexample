@@ -1,0 +1,31 @@
+version: "3.8"
+services:
+  mongo:
+    image: mongo:6
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - my-network
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile # Make sure the file is named "Dockerfile", not "dockerfile"
+    ports:
+      - "5000:3000"
+    env_file:
+      - .env
+    depends_on:
+      - mongo
+    networks:
+      - my-network
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/mydb
+
+volumes:
+  mongo-data:
+
+networks:
+  my-network:
+    driver: bridge
