@@ -1,9 +1,13 @@
+## Docker commands
+
 docker build -t nodeexample:v1 .
 docker run -itd -p 3000:3000 --name nodeexamplecontainer nodeexample:v1
 docker login
 
 docker tag localimage destinationImagePath
 docker tag nodexample:v1 ssuresh5b/first-repo:v1
+
+## Kubernetes commands
 
 minikube start
 
@@ -47,7 +51,7 @@ kubectl delete service nginx
 
 kubectl delete all --all
 
-This deletes:
+## This deletes:
 
 Pods
 
@@ -94,11 +98,33 @@ echo "# nodeexample" >> README.md
 git init
 git add README.md
 git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/suresh5b0/nodeexample.git
+git branch -M main (master)
+git remote add origin remote repo
 git push -u origin main
+git push -u origin master
 
 …or push an existing repository from the command line
-git remote add origin https://github.com/suresh5b0/nodeexample.git
-git branch -M main
+git remote add origin remote repo
+git branch -M main(master)
 git push -u origin main
+git push -u origin master
+
+## Git commands
+
+git checkout -b feature/nodeexample1
+git pull origin main
+
+# Create and switch to the feature branch
+
+git checkout -b feature/login-page
+
+# Work on your code...
+
+# Stage and commit changes
+
+git add .
+git commit -m "Add login page UI and validation"
+
+# Push the branch to remote
+
+git push -u origin feature/login-page
