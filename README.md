@@ -114,16 +114,16 @@ git push -u origin master
 git checkout -b feature/nodeexample1
 git pull origin main
 
-# Create and switch to the feature branch
+### Create and switch to the feature branch
 
 git checkout -b feature/login-page
 
-# Work on your code...
+### Work on your code...
 
-# Stage and commit changes
+## Stage and commit changes
 
 git add .
-git commit -m "Add login page UI and validation"
+git commit -m "commit message"
 
 # Push the branch to remote
 
