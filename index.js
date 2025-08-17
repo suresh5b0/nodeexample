@@ -17,7 +17,7 @@ let items = [];
 mongoose
   .connect(process.env.MONGO_URI || "mongodb://localhost:27017/myappdb")
   .then(() => console.log("MongoDB connected"))
-  .catch((err) => console.error("MongoDB Connection error:", err));
+  .catch((err) => console.error("MongoDB Connection error occured:", err));
 
 app.get("/health", (req, res) => res.sendStatus(200));
 

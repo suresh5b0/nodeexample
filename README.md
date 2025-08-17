@@ -125,6 +125,14 @@ git checkout -b feature/login-page
 git add .
 git commit -m "commit message"
 
-# Push the branch to remote
+## Push the branch to remote
 
 git push -u origin feature/login-page
+
+## Step 1: Make sure you're on your feature branch
+
+git checkout feature/your-feature-name
+
+## Step 2: Pull latest changes from main into your feature branch
+
+git pull origin main(master)
