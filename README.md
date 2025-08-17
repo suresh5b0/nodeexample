@@ -127,9 +127,13 @@ git commit -m "commit message"
 
 ## Push the branch to remote
 
-git push -u origin feature/login-page
+git push -u origin feature/feature branch
 
 ## Step 1: Make sure you're on your feature branch
+
+git checkout -b <branch-name>
+
+ex - git checkout -b feature/your-feature-name
 
 git checkout feature/your-feature-name
 
