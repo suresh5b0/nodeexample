@@ -1,10 +1,13 @@
 ## Docker commands
 
 docker build -t nodeexample:v1 .
+
 docker run -itd -p 3000:3000 --name nodeexamplecontainer nodeexample:v1
+
 docker login
 
 docker tag localimage destinationImagePath
+
 docker tag nodexample:v1 ssuresh5b/first-repo:v1
 
 ## Kubernetes commands
@@ -20,6 +23,7 @@ kubectl expose deployment nodexample --port=80 --target-port=3000 --type=LoadBal
 kubectl apply -f ./k8s/servie.yaml
 
 kubectl apply -f ./k8s/deployment.yaml
+
 kubectl apply -f ./k8s/service.yaml
 
 --bash
@@ -30,10 +34,15 @@ kubectl expose deployment nodexample \
  --dry-run=client -o yaml > ./k8s/service.yaml
 
 kubectl get namespaces
+
 kubectl get deployment
+
 kubectl get service
+
 kubectl desc deployment name
+
 kubectl desc service name
+
 kubectl get endpoints nodeexampleservice(servicename)
 minikube service nodexampleservice --url
 
